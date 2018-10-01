@@ -1,1 +1,6 @@
-@import '../styles/variables.scss'
+@import '../../styles/variables.scss';
+
+.content {
+  background-image: url('./static/background-photo-top.png');
+  background-repeat: none;
+}

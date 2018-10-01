@@ -1,12 +1,10 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './styles.scss';
+import Content from './components/Content';
 
 
 const App = () => (
-  <div>
-    <h1>Topleft React Boiler</h1>
-  </div>
+  <Content/>
 );
 
 ReactDOM.render(
