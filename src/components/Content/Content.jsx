@@ -4,7 +4,10 @@ import './styles.scss';
 class Content extends React.Component {
   render() {
     return (
-      <div className='content'>123</div>
+      <div>
+        <div className='content__img'></div>
+        <div className='content'></div>
+      </div>
     );
   }
 }

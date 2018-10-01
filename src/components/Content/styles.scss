@@ -1,6 +1,26 @@
 @import '../../styles/variables.scss';
 
+$orange-light-transparent: rgba(255, 208, 0, 0.9);
+$orange-dark-transparent: rgba(247, 149, 30, 0.9);;
+
 .content {
-  background-image: url('./static/background-photo-top.png');
-  background-repeat: none;
+  &__img {
+    // background-image: url('../../static/background-photo-top.png');
+    // background-repeat: no-repeat;
+    // height: 606px;
+    // position: fixed;
+    // top: 0;
+    // width: 100%;
+    // background-color: rgba(255, 255, 255, 0.1);
+    // z-index: -1;
+  }
+  // background: $orange-light;
+  height: 606px;
+  background: linear-gradient(300deg, $orange-darker 15%, $orange-dark 45%, $orange-light 80%, $orange-dark 99%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  background-attachment: fixed;
+
 }
+
+
+
+
