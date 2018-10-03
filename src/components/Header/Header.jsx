@@ -19,13 +19,13 @@ class Header extends React.Component {
   render() {
     return (
       <header className='header'>
+        <div className='header__title'>DreamCars</div>
         <div className='header__navigation'>
           <label htmlFor="navigation-toggle" className='header__navigation__container'>
             <input id='navigation-toggle' type="checkbox"/>
             <div className='header__navigation__menu'>
               <ul className='header__navigation__menu__list'>
                 {this.listItems.map((item, i) => <li key={i}>{item}</li>)}
-
               </ul>
             </div>
           </label>
