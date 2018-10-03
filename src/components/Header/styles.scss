@@ -1,5 +1,7 @@
 @import '../../styles/variables.scss';
 
+$header-padding: 20px;
+
 .header {
   position: fixed;
   top: 0;
@@ -10,7 +12,7 @@
     font-size:  $font-size-21;
     text-align: right;
     width: 100%;
-    padding: 20px;
+    padding: $header-padding;
     color: $white;
   }
 
@@ -33,7 +35,7 @@
         position: absolute;
         display: inline-block;
         top:10px;
-        left:20px;
+        left:$header-padding;
         color: $white;
         visibility: visible;
         font-size: $font-size-34;
@@ -56,7 +58,7 @@
         content: 'X';
         display: inline-block;
         font-size: 2.8rem;
-        left: 20px;
+        left: $header-padding;
         position: absolute;
         top: 26px;
         visibility: visible;
