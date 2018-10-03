@@ -6,62 +6,17 @@
 
   &__navigation {
 
-    &__menu {
-      display: block;
-      width: 100%;
-      height: 100%;
-      background-color: $white;
-      position: fixed;
-      left: -100%;
-      top: -10px;
-      transition: left .2s;
-
-      &:before {
-        content: 'X';
-        position: absolute;
-        display: inline-block;
-        top: 26px;
-        left: 20px;
-        visibility: visible;
-        font-size: 2.8rem;
-      }
-
-
-      &__list {
-        position: absolute;
-        top: 100px;
-        left: 25%;
-        list-style: none;
-        font-size: $font-size-34;
-        z-index: 10;
-        margin: 0;
-
-        li {
-          color: initial;
-          cursor: pointer;
-          &:hover {
-            color: $orange-dark;
-          }
-        }
-      }
-    }
-
-
-    & #hamburger {
+    & #navigation-toggle {
       visibility: hidden; // hide the checkbox
 
       &:checked {
-
         & ~ .header__navigation__menu {
-          color: $orange-dark;
-          left: 0%;
+          left: 0%; // show the menu div
         }
-
       }
     }
 
-
-    &__hamburger {
+    &__container {
 
       &:before {
         content: '=';
@@ -73,9 +28,51 @@
         visibility: visible;
         font-size: $font-size-34;
       }
+
+    }
+
+    &__menu {
+      background-color: $off-black;
+      display: block;
+      height: 110%;
+      left: -100%;
+      position: fixed;
+      top: -10px;
+      transition: left .3s;
+      width: 100%;
+
+      &:before {
+        color: $orange-dark;
+        content: 'X';
+        display: inline-block;
+        font-size: 2.8rem;
+        left: 20px;
+        position: absolute;
+        top: 26px;
+        visibility: visible;
+      }
+
+
+      &__list {
+        margin: 0;
+        font-size: $font-size-34;
+        left: 25%;
+        list-style: none;
+        position: absolute;
+        top: 100px;
+
+        li {
+          color: $white;
+          cursor: pointer;
+
+          &:hover {
+            color: $orange-dark;
+          }
+
+        }
+      }
     }
 
   }
-
 
 }
