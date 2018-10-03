@@ -1,0 +1,58 @@
+@import '../../styles/variables.scss';
+
+.header {
+  position: fixed;
+  top: 0;
+
+  &__navigation {
+
+    & #hamburger {
+      visibility: hidden;
+
+      & ~ .menu {
+        display: none;
+        width: 100%;
+        height: 100%;
+        background-color: $white;
+        position: fixed;
+        top: -10px;
+
+        &:before {
+          content: 'X';
+          position: absolute;
+          display: inline-block;
+          top: 26px;
+          left: 10px;
+          color: $orange-dark;
+          visibility: visible;
+          font-size: 2.8rem;
+        }
+      }
+
+      &:checked {
+
+        & ~ .menu {
+          display: block;
+        }
+      }
+    }
+
+
+    & .hamburger {
+
+      &:before {
+        content: '=';
+        position: absolute;
+        display: inline-block;
+        top:10px;
+        left:10px;
+        color: $white;
+        visibility: visible;
+        font-size: $font-size-34;
+      }
+    }
+
+  }
+
+
+}
