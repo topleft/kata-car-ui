@@ -3,88 +3,77 @@
 $header-padding: 20px;
 
 .header {
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+  padding: $space;
   position: fixed;
   top: 0;
   width: 100%;
 
   &__title {
-    display: inline-block;
-    font-size:  $font-size-21;
-    text-align: right;
-    width: 100%;
-    padding: $header-padding;
     color: $white;
+    font-size:  $font-size-21;
   }
 
-  &__navigation {
+  &__menu-toggle {
+    border: none;
+    cursor: pointer;
+    background-color: transparent;
+    color: $white;
+    font-size: $font-size-34;
+  }
 
-    & #navigation-toggle {
-      visibility: hidden; // hide the checkbox
+}
 
-      &:checked {
-        & ~ .header__navigation__menu {
-          left: 0%; // show the menu div
-        }
-      }
+.mobile-menu {
+  &.open {
+    display: block;
+    left: 0;
+    top: 0;
+  }
+
+  background-color: $off-black;
+  display: none;
+  height: 110%;
+  left: -100%;
+  position: fixed;
+  top: -10px;
+  transition: left .3s;
+  width: 100%;
+  margin: 0 auto;
+
+  &:before {
+    color: $orange-dark;
+    content: 'X';
+    display: inline-block;
+    font-size: 2.8rem;
+    left: $space*1.5;
+    position: absolute;
+    top: 24px;
+    visibility: visible;
+  }
+
+
+  &__list {
+    display: flex;
+    font-size: $font-size-34;
+    justify-content: center;
+    margin-top: 80px;
+
+    ul {
+      list-style: none;
+      margin: 0;
     }
 
-    &__container {
+    li {
+      color: $white;
+      cursor: pointer;
 
-      &:before {
-        content: '=';
-        position: absolute;
-        display: inline-block;
-        top:10px;
-        left:$header-padding;
-        color: $white;
-        visibility: visible;
-        font-size: $font-size-34;
-      }
-
-    }
-
-    &__menu {
-      background-color: $off-black;
-      display: block;
-      height: 110%;
-      left: -100%;
-      position: fixed;
-      top: -10px;
-      transition: left .3s;
-      width: 100%;
-
-      &:before {
+      &:hover {
         color: $orange-dark;
-        content: 'X';
-        display: inline-block;
-        font-size: 2.8rem;
-        left: $header-padding;
-        position: absolute;
-        top: 26px;
-        visibility: visible;
       }
 
-
-      &__list {
-        margin: 0;
-        font-size: $font-size-34;
-        left: 25%;
-        list-style: none;
-        position: absolute;
-        top: 100px;
-
-        li {
-          color: $white;
-          cursor: pointer;
-
-          &:hover {
-            color: $orange-dark;
-          }
-
-        }
-      }
     }
-
   }
-
 }

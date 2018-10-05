@@ -9,28 +9,36 @@ class Header extends React.Component {
     'Buyers Tips',
     'Finance',
     'Sign In',
-
   ]
 
   constructor() {
     super();
+    this.state = {
+      mobileMenuOpen: false,
+    }
   }
 
   render() {
     return (
-      <header className='header'>
-        <div className='header__title'>DreamCars</div>
-        <div className='header__navigation'>
-          <label htmlFor="navigation-toggle" className='header__navigation__container'>
-            <input id='navigation-toggle' type="checkbox"/>
-            <div className='header__navigation__menu'>
-              <ul className='header__navigation__menu__list'>
-                {this.listItems.map((item, i) => <li key={i}>{item}</li>)}
-              </ul>
-            </div>
-          </label>
+      <div>
+        <header className='header'>
+          <button
+            className='header__menu-toggle'
+            onClick={() => this.setState({mobileMenuOpen: !this.state.mobileMenuOpen})}>
+            =
+          </button>
+          <div className='header__title'>DreamCars</div>
+        </header>
+        <div
+          className={`mobile-menu ${this.state.mobileMenuOpen ? 'open' : ''}`}
+          onClick={() => this.setState({mobileMenuOpen: !this.state.mobileMenuOpen})}>
+          <div className={'mobile-menu__list'}>
+            <ul>
+              {this.listItems.map((item, i) => <li key={i} onClick={() => console.log(item)}>{item}</li>)}
+            </ul>
+          </div>
         </div>
-      </header>
+      </div>
     );
   }
 }
