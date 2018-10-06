@@ -1,0 +1,139 @@
+@import '../../styles/variables.scss';
+
+.header {
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+  padding: $space;
+  position: fixed;
+  top: 0;
+  width: 100%;
+
+  &__title {
+    color: $white;
+    font-size:  $font-size-21;
+  }
+
+  & ul {
+    display: none;
+    margin: 0;
+    padding: 0;
+
+    & span {
+      display: inline-block;
+      margin-left: $space*1.5;
+    }
+  }
+
+  & li {
+    background-color: transparent;
+    color: $white;
+    cursor: pointer;
+    display: inline-block;
+    font-size:  $font-size-14;
+
+    & ~ div {
+      width: 0;
+      height: 2px;
+      background-color: $white;
+      transition: 0.4s width;
+    }
+
+    &:hover {
+      & ~ div {
+        width: 100%;
+      }
+    }
+
+  }
+
+  &__mobile-menu-toggle {
+    border: none;
+    background-color: transparent;
+    background-image: url('../../static/hamburger.svg');
+    background-repeat: no-repeat;
+    background-size: 22px;
+    color: $white;
+    cursor: pointer;
+    font-size: $font-size-34;
+    height: 20px;
+    margin-left: 6px;
+    width: 30px;
+  }
+
+  @media screen and (min-width: 600px) {
+    &__mobile-menu-toggle {
+      display: none;
+    }
+
+    & ul {
+      display: inline-block;
+    }
+  }
+
+  @media screen and (min-width: 1080px) {
+    padding: $space*2 $space*3;
+  }
+
+}
+
+.mobile-menu {
+  &.open {
+    display: block;
+    left: 0;
+    top: 0;
+  }
+
+  background-color: $off-black;
+  display: none;
+  height: 110%;
+  left: -100%;
+  position: fixed;
+  top: -10px;
+  transition: left .3s;
+  width: 100%;
+  margin: 0 auto;
+
+  &:before {
+    background-image: url('../../static/close.svg');
+    background-repeat: no-repeat;
+    background-size: 20px;
+    color: $orange-dark;
+    content: '';
+    display: inline-block;
+    font-size: 2.8rem;
+    height: 20px;
+    left: $space*1.5;
+    position: absolute;
+    top: 12px;
+    visibility: visible;
+    width: 20px;
+  }
+
+
+  &__list {
+    display: flex;
+    font-size: $font-size-34;
+    justify-content: center;
+    margin-top: 80px;
+
+    & ul {
+      list-style: none;
+      margin: 0;
+    }
+
+    & li {
+      color: $white;
+      cursor: pointer;
+
+      &.highlight {
+        color: $lime-green;
+      }
+
+      &:hover, &.highlight:hover {
+        color: $orange-dark;
+      }
+    }
+
+  }
+}
