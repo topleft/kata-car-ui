@@ -13,6 +13,8 @@ class Header extends React.Component {
     'Sign In',
   ]
 
+  title = 'DreamCars'
+
   constructor() {
     super();
     this.state = {
@@ -39,7 +41,7 @@ class Header extends React.Component {
             className='header__mobile-menu-toggle'
             onClick={() => this.setState({mobileMenuOpen: !this.state.mobileMenuOpen})}>
           </button>
-          <div className='header__title'>DreamCars</div>
+          <div className='header__title'>{this.title}</div>
           <ul>
             {this.renderNavItems()}
             <span>

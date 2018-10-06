@@ -1,6 +1,7 @@
 @import '../../styles/variables.scss';
 
 .button {
+  border: none;
   box-shadow: 0 20px 40px $black-shadow;
   cursor: pointer;
   line-height: 1.5;
