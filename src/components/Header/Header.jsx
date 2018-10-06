@@ -21,7 +21,14 @@ class Header extends React.Component {
   }
 
   renderNavItems() {
-    return this.listItems.map((item, i) => <li key={i} onClick={() => console.log(item)}>{item}</li>);
+    return this.listItems.map((item, i) => {
+      return (
+        <span key={i}>
+          <li onClick={() => console.log(item)}>{item}</li>
+          <div></div>
+        </span>
+      );
+    });
   }
 
   render() {
@@ -35,9 +42,11 @@ class Header extends React.Component {
           <div className='header__title'>DreamCars</div>
           <ul>
             {this.renderNavItems()}
-            <li>
-              <Button color='green'>Sign Up</Button>
-            </li>
+            <span>
+              <li>
+                <Button color='green'>Sign Up</Button>
+              </li>
+            </span>
           </ul>
         </header>
         <div
