@@ -1,7 +1,5 @@
 @import '../../styles/variables.scss';
 
-$header-padding: 20px;
-
 .header {
   align-items: center;
   display: flex;
@@ -16,12 +14,12 @@ $header-padding: 20px;
     font-size:  $font-size-21;
   }
 
-  ul {
+  & ul {
     display: none;
     margin: 0;
     padding: 0;
 
-    span {
+    & span {
       display: inline-block;
       margin-left: $space*1.5;
     }
@@ -68,7 +66,7 @@ $header-padding: 20px;
       display: none;
     }
 
-    ul {
+    & ul {
       display: inline-block;
     }
   }
@@ -97,19 +95,19 @@ $header-padding: 20px;
   margin: 0 auto;
 
   &:before {
-    color: $orange-dark;
-    content: '';
     background-image: url('../../static/close.svg');
     background-repeat: no-repeat;
+    background-size: 20px;
+    color: $orange-dark;
+    content: '';
     display: inline-block;
     font-size: 2.8rem;
+    height: 20px;
     left: $space*1.5;
     position: absolute;
     top: 12px;
     visibility: visible;
     width: 20px;
-    height: 20px;
-    background-size: 20px;
   }
 
 
@@ -119,25 +117,20 @@ $header-padding: 20px;
     justify-content: center;
     margin-top: 80px;
 
-    ul {
+    & ul {
       list-style: none;
       margin: 0;
     }
 
-    li {
+    & li {
       color: $white;
       cursor: pointer;
 
       &.highlight {
         color: $lime-green;
-
-        &:hover {
-          color: $orange-dark;
-        }
-
       }
 
-      &:hover {
+      &:hover, &.highlight:hover {
         color: $orange-dark;
       }
     }
