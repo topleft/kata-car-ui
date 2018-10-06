@@ -1,9 +1,11 @@
 @import '../../styles/variables.scss';
 
 .button {
-  padding: $space*.66 $space;
-  line-height: 1.5;
   box-shadow: 0 20px 40px $black-shadow;
+  cursor: pointer;
+  line-height: 1.5;
+  padding: $space*.66 $space;
+  transition: 0.2s box-shadow;
 
   &--green {
     color: $grey-dark;
@@ -14,4 +16,9 @@
     color: $grey-dark;
     background-color: $lime-green;
   }
+
+  &:hover {
+    box-shadow: 0 12px 24px $black-shadow;
+  }
+
 }
