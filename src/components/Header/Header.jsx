@@ -23,9 +23,8 @@ class Header extends React.Component {
       <div>
         <header className='header'>
           <button
-            className='header__menu-toggle'
+            className='header__mobile-menu-toggle'
             onClick={() => this.setState({mobileMenuOpen: !this.state.mobileMenuOpen})}>
-            =
           </button>
           <div className='header__title'>DreamCars</div>
         </header>
@@ -35,6 +34,7 @@ class Header extends React.Component {
           <div className={'mobile-menu__list'}>
             <ul>
               {this.listItems.map((item, i) => <li key={i} onClick={() => console.log(item)}>{item}</li>)}
+              <li className='highlight'>Sign Up</li>
             </ul>
           </div>
         </div>

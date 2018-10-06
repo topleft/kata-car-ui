@@ -16,12 +16,24 @@ $header-padding: 20px;
     font-size:  $font-size-21;
   }
 
-  &__menu-toggle {
+  &__mobile-menu-toggle {
     border: none;
     cursor: pointer;
     background-color: transparent;
     color: $white;
     font-size: $font-size-34;
+    background-image: url('../../static/hamburger.svg');
+    background-repeat: no-repeat;
+    background-size: 22px;
+    width: 30px;
+    height: 20px;
+    margin-left: 6px;
+  }
+
+  @media screen and (min-width: 540px) {
+    &__mobile-menu-toggle {
+      display: none;
+    }
   }
 
 }
@@ -45,13 +57,18 @@ $header-padding: 20px;
 
   &:before {
     color: $orange-dark;
-    content: 'X';
+    content: '';
+    background-image: url('../../static/close.svg');
+    background-repeat: no-repeat;
     display: inline-block;
     font-size: 2.8rem;
     left: $space*1.5;
     position: absolute;
-    top: 24px;
+    top: 12px;
     visibility: visible;
+    width: 20px;
+    height: 20px;
+    background-size: 20px;
   }
 
 
@@ -70,10 +87,19 @@ $header-padding: 20px;
       color: $white;
       cursor: pointer;
 
+      &.highlight {
+        color: $lime-green;
+
+        &:hover {
+          color: $orange-dark;
+        }
+
+      }
+
       &:hover {
         color: $orange-dark;
       }
-
     }
+
   }
 }
