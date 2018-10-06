@@ -16,6 +16,20 @@ $header-padding: 20px;
     font-size:  $font-size-21;
   }
 
+  ul {
+    margin: 0;
+    padding: 0;
+    display: none;
+  }
+
+  & li {
+    display: inline-block;
+    margin-left: $space*1.5;
+    color: $white;
+    font-size:  $font-size-14;
+
+  }
+
   &__mobile-menu-toggle {
     border: none;
     cursor: pointer;
@@ -30,10 +44,18 @@ $header-padding: 20px;
     margin-left: 6px;
   }
 
-  @media screen and (min-width: 540px) {
+  @media screen and (min-width: 600px) {
     &__mobile-menu-toggle {
       display: none;
     }
+
+    ul {
+      display: inline-block;
+    }
+  }
+
+  @media screen and (min-width: 1080px) {
+    padding: $space*2 $space*3;
   }
 
 }

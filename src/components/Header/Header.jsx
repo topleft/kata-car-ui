@@ -2,6 +2,8 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import './styles.scss';
 
+import Button from '../Button';
+
 
 class Header extends React.Component {
   listItems = [
@@ -18,6 +20,10 @@ class Header extends React.Component {
     }
   }
 
+  renderNavItems() {
+    return this.listItems.map((item, i) => <li key={i} onClick={() => console.log(item)}>{item}</li>);
+  }
+
   render() {
     return (
       <div>
@@ -27,13 +33,19 @@ class Header extends React.Component {
             onClick={() => this.setState({mobileMenuOpen: !this.state.mobileMenuOpen})}>
           </button>
           <div className='header__title'>DreamCars</div>
+          <ul>
+            {this.renderNavItems()}
+            <li>
+              <Button color='green'>Sign Up</Button>
+            </li>
+          </ul>
         </header>
         <div
           className={`mobile-menu ${this.state.mobileMenuOpen ? 'open' : ''}`}
           onClick={() => this.setState({mobileMenuOpen: !this.state.mobileMenuOpen})}>
           <div className={'mobile-menu__list'}>
             <ul>
-              {this.listItems.map((item, i) => <li key={i} onClick={() => console.log(item)}>{item}</li>)}
+              {this.renderNavItems()}
               <li className='highlight'>Sign Up</li>
             </ul>
           </div>
