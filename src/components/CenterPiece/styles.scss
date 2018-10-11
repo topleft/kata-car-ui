@@ -1,0 +1,36 @@
+@import '../../styles/variables.scss';
+
+.center-piece {
+  margin: 200px auto 0px auto;
+  width: 100%;
+  text-align: center;
+  color: $white;
+  max-width: 640px;
+  text-shadow: 0 10px 30px $black-shadow;
+  &__title {
+    font-size: $font-size-34;
+
+  }
+
+  &__subtitle {
+    font-size: $font-size-16;
+    padding: $space*1 0;
+  }
+
+  @media screen and (min-width: 600px) {
+
+    &__title {
+      font-size: $font-size-54;
+    }
+
+    &__subtitle {
+      font-size: $font-size-21;
+      line-height: 1.6;
+      padding: $space 0;
+    }
+
+  }
+
+
+
+}

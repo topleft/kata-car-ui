@@ -84,7 +84,13 @@
   font-size: $font-size-base; // 16px
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  padding-left: $space;
+  padding-right: $space;
 
+  @media screen and (min-width: 600px){
+    padding-left: $space*3;
+    padding-right: $space*3;
+  }
 }
 
  h1,
