@@ -46,7 +46,7 @@ class Header extends React.Component {
             {this.renderNavItems()}
             <span>
               <li>
-                <Button color='green'>Sign Up</Button>
+                <Button color='green' handleClick={() => console.log('clicked the header')}>Sign Up</Button>
               </li>
             </span>
           </ul>

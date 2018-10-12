@@ -16,13 +16,15 @@ class InlineForm extends React.Component {
 
   renderInputs() {
     return this.props.inputs.map((input, i) => {
+      console.log('iv', input.value);
       return <input
         key={i}
         name={input.name}
         type={input.type || 'text'}
         value={input.value}
         onChange={(e) => input.handleChange(e)}
-        placeholder={input.placeholder}/>;
+        placeholder={input.placeholder}
+        style={{width: input.width}}/>;
     });
   }
 
@@ -30,7 +32,7 @@ class InlineForm extends React.Component {
     return (
       <form className='inline-form'>
         {this.renderInputs()}
-        <Button color='green' >{this.props.buttonText}</Button>
+        <Button color='green' handleClick={(e) => e.preventDefault()}>{this.props.buttonText}</Button>
       </form>
     );
   }
@@ -39,7 +41,13 @@ class InlineForm extends React.Component {
 InlineForm.propTypes = {
   buttonText: PropTypes.string,
   handleSubmit: PropTypes.func,
-  inputs: PropTypes.array,
+  inputs: PropTypes.arrayOf(PropTypes.shape({
+    name: PropTypes.string,
+    type: PropTypes.oneOf(['text', 'number']),
+    value: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
+    placeholder: PropTypes.string,
+    width: PropTypes.string,
+  })),
 }
 
 export default InlineForm;

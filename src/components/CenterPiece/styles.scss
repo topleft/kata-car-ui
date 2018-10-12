@@ -5,8 +5,14 @@
   width: 100%;
   text-align: center;
   color: $white;
-  max-width: 640px;
+  max-width: 720px;
   text-shadow: 0 10px 30px $black-shadow;
+
+  &__upper {
+    max-width: 640px;
+    margin: 0 auto;
+  }
+
   &__title {
     font-size: $font-size-34;
 
@@ -29,6 +35,12 @@
       padding: $space 0;
     }
 
+  }
+
+  &__image {
+    margin-top: 64px;
+    width:  100%;
+    height: auto;
   }
 
 

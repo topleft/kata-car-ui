@@ -35,5 +35,10 @@
     width: 100%;
     box-shadow: none;
     padding: $space;
+
+    @media screen and (min-width: 600px) {
+      width: 150px;
+    }
+
   }
 }
