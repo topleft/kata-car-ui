@@ -1,6 +1,7 @@
 import React from 'react';
 import Header from '../Header';
 import CenterPiece from '../CenterPiece';
+import GalleryContainer from '../GalleryContainer';
 import './styles.scss';
 
 const title = 'Find Your Dream Car';
@@ -16,6 +17,7 @@ class Content extends React.Component {
           <CenterPiece
             title={title}
             subtitle={subtitle} />
+          <GalleryContainer/>
         </div>
       </div>
     );
