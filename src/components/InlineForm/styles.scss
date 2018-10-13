@@ -1,0 +1,44 @@
+@import '../../styles/variables.scss';
+
+.inline-form {
+  box-shadow: 0 20px 40px $black-shadow;
+  display: flex;
+  margin-top: $space;
+  flex-direction: column;
+
+  @media screen and (min-width: 600px) {
+    flex-direction: row;
+    & input {
+      border-right: none;
+      border-bottom: 1px solid $grey-light;
+    }
+
+  }
+
+  & input {
+    width: 100%;
+    border: none;
+    border-radius: none;
+    background-color: $white;
+    padding: $space;
+    border-right: none;
+    border-bottom: 1px solid $grey-light;
+
+    @media screen and (min-width: 600px) {
+      border-bottom: none;
+      border-right: 1px solid $grey-light;
+    }
+
+  }
+
+  & button {
+    width: 100%;
+    box-shadow: none;
+    padding: $space;
+
+    @media screen and (min-width: 600px) {
+      width: 150px;
+    }
+
+  }
+}
