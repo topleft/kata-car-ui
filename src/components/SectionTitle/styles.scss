@@ -1,0 +1,17 @@
+@import '../../styles/variables.scss';
+
+.section-title {
+  margin: 50px auto;
+  text-align: center;
+  width: 100%;
+
+  &__title {
+    font-size: $font-size-34;
+  }
+
+  &__subtitle {
+    margin-top: $space*2;
+    font-size: $font-size-21;
+    color: $grey-dark;
+  }
+}

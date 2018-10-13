@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import './styles.scss';
+import GalleryItem from '../GalleryItem';
 
 const Gallery = (props) => {
 
@@ -9,16 +10,21 @@ const Gallery = (props) => {
 
   return (
     <div className='gallery'>
-      <div className='gallery__title'>{title}</div>
-      <div className='gallery__subtitle'>{subtitle}</div>
-      <div>
+      <div className='gallery__items'>
         {props.items.map((item, i) => {
-          return <GlleryItem key={i}/>
+          return <GalleryItem key={i} {...item}/>;
         })}
       </div>
     </div>
   );
 
+};
+
+Gallery.propTypes = {
+  items: PropTypes.arrayOf(PropTypes.shape({
+    title: PropTypes.string,
+    imageUrl: PropTypes.string,
+  }))
 }
 
 export default Gallery;

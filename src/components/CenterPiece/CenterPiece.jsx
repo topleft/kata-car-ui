@@ -2,9 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import './styles.scss';
 import InlineForm from '../InlineForm/InlineForm';
-import car from '../../static/Mercedes-Benz-PNG-Transparent.png'
-
-
+import car from '../../static/Mercedes-Benz-PNG-Transparent.png';
 
 class CenterPiece extends React.Component {
   constructor() {
