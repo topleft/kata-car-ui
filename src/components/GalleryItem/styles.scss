@@ -29,8 +29,6 @@ $tag-hang: 8px;
       height: auto;
     }
 
-
-
   }
 
   &__tag {
@@ -45,19 +43,19 @@ $tag-hang: 8px;
     top: $tag-height - 6px;
     background-color: $orange-dark;
     z-index: 2;
-    padding-left: 6px;
+    padding-left: 0;
 
     &:before {
       content: '';
       display: inline-block;
       position: absolute;
-      right: 62px;
-      width: 14px;
+      right: 60px;
+      width: 18px;
       height: $tag-height;
       transform: skew(20deg);
       background-color: $orange-dark;
-      border-radius: 4px 3px;
-      z-index: 1;
+      border-radius: 4px 4px;
+      z-index: -1;
     }
 
     &:after {
