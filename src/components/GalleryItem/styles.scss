@@ -1,1 +1,78 @@
 @import '../../styles/variables.scss';
+
+$tag-height: 32px;
+$tag-hang: 8px;
+
+.gallery-item {
+
+  position: relative;
+  width: 300px;
+  margin: 5px;
+
+  @media screen and (max-width: 710px) {
+    width: 48%;
+  }
+  @media screen and (max-width: 530px) {
+    width: 90%;
+  }
+
+  &__image {
+    background-color: $grey-light;
+    display: inline-block;
+    padding: $space;
+
+    & img {
+      width: 80%;
+      height: auto;
+    }
+
+
+
+  }
+
+  &__tag {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: $white;
+    position: absolute;
+    width: 70px;
+    height: $tag-height;
+    right: -($tag-hang);
+    top: $tag-height - 6px;
+    background-color: $orange-dark;
+    z-index: 2;
+    padding-left: 6px;
+
+    &:before {
+      content: '';
+      display: inline-block;
+      position: absolute;
+      right: 62px;
+      width: 14px;
+      height: $tag-height;
+      transform: skew(20deg);
+      background-color: $orange-dark;
+      border-radius: 4px 3px;
+      z-index: 1;
+    }
+
+    &:after {
+      content: '';
+      display: inline-block;
+      position: absolute;
+      right: 0;
+      top: $tag-height;
+      border-top: $tag-hang solid $orange-burnt;
+      border-right: $tag-hang solid transparent;
+      width: 0;
+      height: 0;
+    }
+  }
+
+  &__title {
+    padding-top: $space*.33;
+  }
+}
+
+
