@@ -1,0 +1,36 @@
+@import '../../styles/variables.scss';
+
+.tip-item {
+
+  position: relative;
+  width: 32%;
+  display: inline-block;
+  margin: auto;
+
+  @media screen and (max-width: 530px) {
+    width: 90%;
+    margin: auto;
+  }
+
+  &__image {
+    display: inline-block;
+
+    & img {
+      width: 100%;
+      height: auto;
+      filter: brightness(.7);
+    }
+
+  }
+
+  &__title {
+    color: $white;
+    transform: translateX(-50%);
+    left: 50%;
+    position: absolute;
+    bottom: 10%;
+    width: 100%;
+  }
+}
+
+
