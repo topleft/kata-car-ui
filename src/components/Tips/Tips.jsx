@@ -20,7 +20,7 @@ const Tips = (props) => {
         </div>
       </div>
       <div style={{margin: 'auto', width: '100%', textAlign: 'center'}}>
-        <Button color={'orange'}>SEE ALL OF OUR GUIDES</Button>
+        <Button color={'orange'} handleClick={() => console.log('clicked: MORE GUIDES')}>MORE GUIDES</Button>
       </div>
     </div>
   );

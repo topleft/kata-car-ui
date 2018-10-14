@@ -10,8 +10,8 @@ const Gallery = (props) => {
   return (
     <div className='deals-section'>
       <SectionTitle
-            title={'Today\'s Hottest Deals'}
-            subtitle={'Checkout the most popular cars in stock today'}/>
+        title={'Today\'s Hottest Deals'}
+        subtitle={'Checkout the most popular cars in stock today'}/>
       <div className='gallery'>
         <div className='gallery__items'>
           {props.items.map((item, i) => {
@@ -20,7 +20,7 @@ const Gallery = (props) => {
         </div>
       </div>
       <div style={{margin: 'auto', width: '100%', textAlign: 'center'}}>
-        <Button color={'orange'}>VIEW ALL TODAYS DEALS</Button>
+        <Button color={'orange'} handleClick={() => console.log('clicked: MORE DEALS')}>MORE DEALS</Button>
       </div>
     </div>
   );
