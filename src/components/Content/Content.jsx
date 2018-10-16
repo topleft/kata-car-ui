@@ -4,6 +4,7 @@ import CenterPiece from '../CenterPiece';
 import GalleryContainer from '../GalleryContainer';
 import './styles.scss';
 import TipsContainer from '../TipsContainer';
+import MailingListContainer from '../MailingListContainer';
 import Footer from '../Footer';
 
 const title = 'Find Your Dream Car';
@@ -22,6 +23,7 @@ class Content extends React.Component {
           <GalleryContainer/>
           <TipsContainer/>
         </div>
+        <MailingListContainer/>
         <Footer title={'DreamCars'} listItems={['Search Cars', 'Buyer Tips', 'Finance']}/>
       </div>
     );

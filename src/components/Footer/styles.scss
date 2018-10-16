@@ -2,7 +2,7 @@
 
 .footer {
   color: $white;
-  height: 100px;
+  height: 90px;
   background-color: $charcoal;
   width: 100%;
   display: flex;
@@ -20,7 +20,7 @@
     li {
       cursor: pointer;
       display: inline-block;
-      margin: $space*1.5;
+      margin-left: $space*3;
     }
   }
 }

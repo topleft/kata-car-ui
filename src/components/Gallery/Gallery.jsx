@@ -32,6 +32,6 @@ Gallery.propTypes = {
     title: PropTypes.string,
     imageUrl: PropTypes.string,
   }))
-}
+};
 
 export default Gallery;

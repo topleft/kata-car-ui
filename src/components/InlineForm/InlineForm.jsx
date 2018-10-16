@@ -48,7 +48,7 @@ InlineForm.propTypes = {
     placeholder: PropTypes.string,
     width: PropTypes.string,
   })),
-}
+};
 
 export default InlineForm;
 

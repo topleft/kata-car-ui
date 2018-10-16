@@ -1,6 +1,5 @@
 import React from 'react';
 import Gallery from '../Gallery';
-import Button from '../Button';
 import car1 from '../../static/focus.png';
 import car2 from '../../static/skoda.png';
 import car3 from '../../static/civic.png';

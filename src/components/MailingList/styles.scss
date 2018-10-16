@@ -1,0 +1,20 @@
+@import '../../styles/variables.scss';
+
+.mailing-list {
+  margin-top: 80px;
+  width: 100%;
+  height: 350px;
+  background: linear-gradient(300deg, $orange-darker 15%, $orange-dark 45%, $orange-light 80%, $orange-dark 99%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  z-index: -1;
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  justify-content: center;
+  padding: 0 $space 60px $space;
+
+  &__container {
+    max-width: 640px;
+    margin: 0 auto;
+
+  }
+}

@@ -10,14 +10,14 @@ const Button = (props) => {
       className={`button button--${props.color || ''}`}
       onClick={(e) => props.handleClick(e)}>
       {props.children}
-      </button>
+    </button>
   );
-}
+};
 
 Button.propTypes = {
   children: PropTypes.any,
   handleClick: PropTypes.func.isRequired,
   color: PropTypes.string,
-}
+};
 
 export default Button;

@@ -12,7 +12,7 @@ const Footer = (props) => {
       </ul>
     </footer>
   );
-}
+};
 
 
 Footer.propTypes = {

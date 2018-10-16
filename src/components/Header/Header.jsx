@@ -1,5 +1,4 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 import './styles.scss';
 
 import Button from '../Button';
@@ -19,7 +18,7 @@ class Header extends React.Component {
     super();
     this.state = {
       mobileMenuOpen: false,
-    }
+    };
   }
 
   renderNavItems() {
