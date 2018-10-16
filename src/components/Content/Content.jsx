@@ -22,7 +22,7 @@ class Content extends React.Component {
           <GalleryContainer/>
           <TipsContainer/>
         </div>
-        <Footer title={'DreamCars'} listItems={[]}/>
+        <Footer title={'DreamCars'} listItems={['Search Cars', 'Buyer Tips', 'Finance']}/>
       </div>
     );
   }
