@@ -16,7 +16,6 @@ class InlineForm extends React.Component {
 
   renderInputs() {
     return this.props.inputs.map((input, i) => {
-      console.log('iv', input.value);
       return <input
         key={i}
         name={input.name}

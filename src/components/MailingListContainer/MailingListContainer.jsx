@@ -6,7 +6,9 @@ class MailingListContainer extends React.Component {
   constructor(props) {
     super(props);
 
-    this.state = {};
+    this.state = {
+      emailAddress: ''
+    };
   }
 
   render() {
@@ -14,8 +16,9 @@ class MailingListContainer extends React.Component {
       {
         name: 'emailAddress',
         type: 'text',
-        value: '',
+        value: this.state.emailAddress,
         placeholder: 'Enter your email address...',
+        handleChange: (e) => this.setState({emailAddress: e.target.value}),
         width: '100%',
       }
     ];
