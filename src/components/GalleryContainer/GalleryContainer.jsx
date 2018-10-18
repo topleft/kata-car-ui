@@ -14,19 +14,23 @@ class GalleryContainer extends React.Component {
 
   getCars() {
     return [
-      {title: 'Title', imageUrl: car1, tagText: '$18,000'},
-      {title: 'Title', imageUrl: car2, tagText: '$18,000'},
-      {title: 'Title', imageUrl: car3, tagText: '$18,000'},
-      {title: 'Title', imageUrl: car4, tagText: '$18,000'},
-      {title: 'Title', imageUrl: car5, tagText: '$18,000'},
-      {title: 'Title', imageUrl: car6, tagText: '$18,000'},
-      {title: 'Title', imageUrl: car7, tagText: '$18,000'},
-      {title: 'Title', imageUrl: car8, tagText: '$18,000'}
+      {title: 'focus', imageUrl: car1, tagText: '$18,000'},
+      {title: 'skoda', imageUrl: car2, tagText: '$18,000'},
+      {title: 'civic', imageUrl: car3, tagText: '$18,000'},
+      {title: 'corsa', imageUrl: car4, tagText: '$18,000'},
+      {title: 'clio', imageUrl: car5, tagText: '$18,000'},
+      {title: 'polo', imageUrl: car6, tagText: '$18,000'},
+      {title: 'ibiza', imageUrl: car7, tagText: '$18,000'},
+      {title: 'i5', imageUrl: car8, tagText: '$18,000'}
     ];
   }
 
   render() {
-    return <Gallery items={this.getCars()}/>;
+    return (
+      <div>
+        <Gallery items={this.getCars()}/>
+      </div>
+    );
   }
 }
 

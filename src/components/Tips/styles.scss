@@ -1,11 +1,11 @@
 @import '../../styles/variables.scss';
 
-.deals-section {
-  margin-bottom: 90px;
+.tips-section {
+
 }
 
-.gallery {
-  margin: 50px auto 10px auto;
+.tips {
+  margin: 50px auto;
   text-align: center;
   width: 100%;
   max-width: 1400px;
@@ -13,7 +13,7 @@
   &__items {
     display: flex;
     flex-flow: wrap;
-    justify-content: space-around;
+    justify-content: space-between;
     align-content: space-around;
   }
 }

@@ -3,7 +3,9 @@ import Header from '../Header';
 import CenterPiece from '../CenterPiece';
 import GalleryContainer from '../GalleryContainer';
 import './styles.scss';
-import SectionTitle from '../SectionTitle';
+import TipsContainer from '../TipsContainer';
+import MailingListContainer from '../MailingListContainer';
+import Footer from '../Footer';
 
 const title = 'Find Your Dream Car';
 const subtitle = 'Search over 20,000 pre-approved used cars and find your perfect vehicle today';
@@ -18,11 +20,11 @@ class Content extends React.Component {
           <CenterPiece
             title={title}
             subtitle={subtitle} />
-          <SectionTitle
-            title={'Today\'s Hottest Deals'}
-            subtitle={'Checkout the most popular cars in stock today'}/>
           <GalleryContainer/>
+          <TipsContainer/>
         </div>
+        <MailingListContainer/>
+        <Footer title={'DreamCars'} listItems={['Search Cars', 'Buyer Tips', 'Finance']}/>
       </div>
     );
   }

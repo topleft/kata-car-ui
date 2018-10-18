@@ -19,7 +19,7 @@ class CenterPiece extends React.Component {
         name: 'model',
         type: 'text',
         value: this.state.model,
-        handleChange: (e) => {this.setState({model: e.target.value})},
+        handleChange: (e) => {this.setState({model: e.target.value});},
         placeholder: 'Search make or model',
         width: (() => window.innerWidth > 600 ? '60%' : '100%')(), // revisit this solution
       },

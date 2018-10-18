@@ -4,12 +4,12 @@ import './styles.scss';
 
 const SectionTitle = (props) => {
 
-  const {title, subtitle} = props;
+  const {title, subtitle, color} = props;
 
   return (
     <div className='section-title'>
-      <div className='section-title__title'>{title}</div>
-      <div className='section-title__subtitle'>{subtitle}</div>
+      <div className={`section-title__title ${color == 'white' ? 'section-title__title--white' : '' }`}>{title}</div>
+      <div className={`section-title__subtitle ${color == 'white' ? 'section-title__subtitle--white' : '' }`}>{subtitle}</div>
     </div>
   );
 };
