@@ -2,6 +2,7 @@ const webpack = require('webpack');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const CleanWebpackPlugin = require('clean-webpack-plugin');
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
+var ImageminPlugin = require('imagemin-webpack-plugin').default
 
 const path = require('path');
 
@@ -71,6 +72,11 @@ module.exports = {
     new HtmlWebpackPlugin({template: path.join(APP_PATH, 'template.html')}),
     new MiniCssExtractPlugin({
       filename: 'style.[contenthash].css',
+    }),
+    new ImageminPlugin({
+      pngquant: {
+        quality: '95-100'
+      }
     })
   ],
 };
