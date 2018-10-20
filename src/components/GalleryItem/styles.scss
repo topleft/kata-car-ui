@@ -9,10 +9,10 @@ $tag-hang: 8px;
   width: 22%;
   margin: 5px;
 
-  @media screen and (max-width: 1080px) {
+  @media screen and (max-width: $breakpoint-large) {
     width: 48%;
   }
-  @media screen and (max-width: 600) {
+  @media screen and (max-width: $breakpoint-med) {
     width: 90%;
   }
 

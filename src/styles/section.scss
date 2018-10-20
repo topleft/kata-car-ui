@@ -1,0 +1,11 @@
+@import './variables.scss';
+
+.section {
+  padding-left: $space;
+  padding-right: $space;
+
+  @media screen and (min-width: $breakpoint-med){
+    padding-left: $space*3;
+    padding-right: $space*3;
+  }
+}
