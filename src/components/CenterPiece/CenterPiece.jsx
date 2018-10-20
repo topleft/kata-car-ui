@@ -47,7 +47,8 @@ class CenterPiece extends React.Component {
             <InlineForm
               inputs={this.inputs}
               handleSubmit={(e) => e.preventDefault()}
-              buttonText='Find My Car'/>
+              buttonText='Find My Car'
+              mediaQuery='(min-width: 640px)'/>
           </div>
           <img
             className='center-piece__image'
