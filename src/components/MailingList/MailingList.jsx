@@ -7,6 +7,7 @@ import InlineForm from '../InlineForm';
 const MailingList = (props) => {
   return (
     <div className='mailing-list'>
+      <div className='mailing-list__background'/>
       <div className='mailing-list__container'>
         <SectionTitle color='white' title='Never Miss a Message' subtitle='Join out exclusive list for one off deal and more'/>
         <InlineForm buttonText={'Sign Me Up'} inputs={props.inputs} handleSubmit={props.handleSubmit}/>

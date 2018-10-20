@@ -14,6 +14,10 @@ class InlineForm extends React.Component {
     };
   }
 
+  getInputWidth(width) {
+    return this.props.applyWidth ? {width: width} : null;
+  }
+
   renderInputs() {
     return this.props.inputs.map((input, i) => {
       return <input
@@ -23,7 +27,8 @@ class InlineForm extends React.Component {
         value={input.value}
         onChange={(e) => input.handleChange(e)}
         placeholder={input.placeholder}
-        style={{width: input.width}}/>;
+        style={this.getInputWidth(input.width)}/>;
+
     });
   }
 

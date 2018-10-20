@@ -86,16 +86,6 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
-.content {
-  padding-left: $space;
-  padding-right: $space;
-
-  @media screen and (min-width: 600px){
-    padding-left: $space*3;
-    padding-right: $space*3;
-  }
-}
-
  h1,
  h2,
  h3,

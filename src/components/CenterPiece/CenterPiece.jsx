@@ -21,7 +21,7 @@ class CenterPiece extends React.Component {
         value: this.state.model,
         handleChange: (e) => {this.setState({model: e.target.value});},
         placeholder: 'Search make or model',
-        width: (() => window.innerWidth > 600 ? '60%' : '100%')(), // revisit this solution
+        width: '60%',
       },
       {
         name: 'postalCode',
@@ -29,7 +29,7 @@ class CenterPiece extends React.Component {
         value: this.state.postalCode,
         handleChange: (e) => this.setState({postalCode: e.target.value}),
         placeholder: 'Postal code',
-        width: (() => window.innerWidth > 600 ? '40%' : '100%')(),
+        width: '40%',
       }
     ];
   }
@@ -39,19 +39,21 @@ class CenterPiece extends React.Component {
     const {title, subtitle} = this.props;
 
     return (
-      <div className='center-piece'>
-        <div className='center-piece__upper'>
-          <div className='center-piece__title'>{title}</div>
-          <div className='center-piece__subtitle'>{subtitle}</div>
-          <InlineForm
-            inputs={this.inputs}
-            handleSubmit={(e) => e.preventDefault()}
-            buttonText='Find My Car'/>
+      <div className='section'>
+        <div className='center-piece'>
+          <div className='center-piece__upper'>
+            <div className='center-piece__title'>{title}</div>
+            <div className='center-piece__subtitle'>{subtitle}</div>
+            <InlineForm
+              inputs={this.inputs}
+              handleSubmit={(e) => e.preventDefault()}
+              buttonText='Find My Car'/>
+          </div>
+          <img
+            className='center-piece__image'
+            src={car}
+            alt=""/>
         </div>
-        <img
-          className='center-piece__image'
-          src={car}
-          alt=""/>
       </div>
     );
   }

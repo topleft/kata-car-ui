@@ -7,8 +7,10 @@ import TipsContainer from '../TipsContainer';
 import MailingListContainer from '../MailingListContainer';
 import Footer from '../Footer';
 
-const title = 'Find Your Dream Car';
-const subtitle = 'Search over 20,000 pre-approved used cars and find your perfect vehicle today';
+const centerPieceTitle = 'Find Your Dream Car';
+const centerPieceSubtitle = 'Search over 20,000 pre-approved used cars and find your perfect vehicle today';
+const footerTitle = 'DreamCars';
+const footerListItems = ['Search Cars', 'Buyer Tips', 'Finance'];
 
 class Content extends React.Component {
   render() {
@@ -18,13 +20,13 @@ class Content extends React.Component {
           <div className='backdrop' />
           <Header/>
           <CenterPiece
-            title={title}
-            subtitle={subtitle} />
+            title={centerPieceTitle}
+            subtitle={centerPieceSubtitle} />
           <GalleryContainer/>
           <TipsContainer/>
+          <MailingListContainer/>
+          <Footer title={footerTitle} listItems={footerListItems}/>
         </div>
-        <MailingListContainer/>
-        <Footer title={'DreamCars'} listItems={['Search Cars', 'Buyer Tips', 'Finance']}/>
       </div>
     );
   }

@@ -6,13 +6,8 @@
   margin-top: $space;
   flex-direction: column;
 
-  @media screen and (min-width: 600px) {
+  @media screen and (min-width: $breakpoint-med) {
     flex-direction: row;
-    & input {
-      border-right: none;
-      border-bottom: 1px solid $grey-light;
-    }
-
   }
 
   & input {
@@ -24,7 +19,7 @@
     border-right: none;
     border-bottom: 1px solid $grey-light;
 
-    @media screen and (min-width: 600px) {
+    @media screen and (min-width: $breakpoint-med) {
       border-bottom: none;
       border-right: 1px solid $grey-light;
     }
@@ -36,7 +31,7 @@
     box-shadow: none;
     padding: $space;
 
-    @media screen and (min-width: 600px) {
+    @media screen and (min-width: $breakpoint-med) {
       width: 150px;
     }
 
