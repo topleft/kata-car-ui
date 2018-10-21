@@ -1,5 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import Media from "react-media";
 import './styles.scss';
 import InlineForm from '../InlineForm/InlineForm';
 import car from '../../static/Mercedes-Benz-PNG-Transparent.png';
@@ -44,11 +45,16 @@ class CenterPiece extends React.Component {
           <div className='center-piece__upper'>
             <div className='center-piece__title'>{title}</div>
             <div className='center-piece__subtitle'>{subtitle}</div>
-            <InlineForm
-              inputs={this.inputs}
-              handleSubmit={(e) => e.preventDefault()}
-              buttonText='Find My Car'
-              mediaQuery='(min-width: 640px)'/>
+            <Media query='(min-width: 640px)'>
+              {(match) => (
+                <InlineForm
+                  inputs={this.inputs}
+                  handleSubmit={(e) => e.preventDefault()}
+                  buttonText='Find My Car'
+                  match={match}/>
+              )}
+            </Media>
+
           </div>
           <img
             className='center-piece__image'

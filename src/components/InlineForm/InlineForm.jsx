@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import Media from "react-media";
+
 import './styles.scss';
 
 import Button from '../Button';
@@ -9,17 +9,13 @@ class InlineForm extends React.Component {
 
   constructor() {
     super();
-    this.state = {
-      model: '',
-      postalCode: '',
-    };
   }
 
-  getInputWidth(width, mediaQueryMatch) {
-    return mediaQueryMatch ? {width: width} : null;
+  getInputWidth(width) {
+    return this.props.match ? {width} : null;
   }
 
-  renderInputs(mediaQueryMatch) {
+  renderInputs() {
     return this.props.inputs.map((input, i) => {
       return <input
         key={i}
@@ -28,31 +24,21 @@ class InlineForm extends React.Component {
         value={input.value}
         onChange={(e) => input.handleChange(e)}
         placeholder={input.placeholder}
-        style={this.getInputWidth(input.width, mediaQueryMatch)}/>;
+        style={this.getInputWidth(input.width)}/>;
 
     });
   }
 
   render() {
     return (
-      <Media query={this.props.mediaQuery}>
-        {
-          (match) => (
-            <form className='inline-form'>
-              {this.renderInputs(match)}
-              <Button color='green' handleClick={(e) => e.preventDefault()}>{this.props.buttonText}</Button>
-            </form>
-          )
-        }
-      </Media>
+      <form className='inline-form'>
+        {this.renderInputs()}
+        <Button color='green' handleClick={(e) => this.props.handleSubmit(e)}>{this.props.buttonText}</Button>
+      </form>
     );
-
   }
 }
 
-InlineForm.defaultProps = {
-  mediaQuery: '',
-};
 
 InlineForm.propTypes = {
   buttonText: PropTypes.string,
@@ -64,7 +50,7 @@ InlineForm.propTypes = {
     placeholder: PropTypes.string,
     width: PropTypes.string,
   })),
-  mediaQuery: PropTypes.string,
+  match: PropTypes.bool,
 };
 
 export default InlineForm;

@@ -5,10 +5,16 @@ import './styles.scss';
 
 const Button = (props) => {
 
+  const handleClick = (e) => {
+    e.preventDefault();
+    props.handleClick(e);
+  }
+
   return (
+
     <button
       className={`button button--${props.color || ''}`}
-      onClick={(e) => props.handleClick(e)}>
+      onClick={(e) => handleClick(e)}>
       {props.children}
     </button>
   );
