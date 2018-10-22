@@ -24,11 +24,13 @@
   }
 
   &__title {
+    bottom: 10%;
     color: $white;
-    transform: translateX(-50%);
+    font-size: $font-size-21;
+    font-weight: $bold-font-weight;
     left: 50%;
     position: absolute;
-    bottom: 10%;
+    transform: translateX(-50%);
     width: 100%;
   }
 }

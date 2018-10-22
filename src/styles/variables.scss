@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:400,500,600,700');
+
 $black: #000;
 $off-black: #161616;
 $charcoal: #342C2C;
@@ -14,7 +16,9 @@ $white-tint: #F5FAFD;
 $black-shadow: rgba(0, 0, 0, .18);
 
 
-$regular-font: Helvetica, Arial, sans-serif;
+$regular-font: Poppins, Arial, sans-serif;
+$medium-font-weight: 500;
+$bold-font-weight: 700;
 
 $font-size-base: 1.6rem; // Use browser default font-size, usually 16px
 

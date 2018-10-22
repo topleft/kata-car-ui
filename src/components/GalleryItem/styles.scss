@@ -29,18 +29,19 @@ $tag-hang: 8px;
   }
 
   &__tag {
-    display: flex;
-    justify-content: center;
     align-items: center;
+    background-color: $orange-dark;
     color: $white;
-    position: absolute;
-    width: 70px;
+    display: flex;
+    font-weight: $medium-font-weight;
     height: $tag-height;
+    justify-content: center;
+    padding-left: 0;
+    position: absolute;
     right: -($tag-hang);
     top: $tag-height - 6px;
-    background-color: $orange-dark;
+    width: 70px;
     z-index: 2;
-    padding-left: 0;
 
     &:before {
       content: '';
