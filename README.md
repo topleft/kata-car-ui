@@ -9,17 +9,28 @@
 
 This is part of my UI Kata learning initiative. I find sketch files of UI's on the internet and code them up focusing on 4 things:
  - React component structure
- - pixel perfect CSS
- - responsiveness (mobile first)
- - component testing
+ - High quality CSS
+ - Responsiveness (mobile first)
+ - Component testing
+ - Accessability
 
 ## Design Credits
 
-TBA
+[Sam Fortune]()
+
+Thanks, Sam, for great designs and a quality sketch file.
+
+## Checklist
+|---|---|
+|React component structure||
+|High quality CSS||
+|Responsiveness||
+|Testing||
+|Accessability||
 
 
 ## TODO
 
 - write tests
 - abstract out reusable components from gallery and tips
-- handle media query for the InlineForm component
+

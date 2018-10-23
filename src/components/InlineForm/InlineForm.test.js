@@ -47,6 +47,5 @@ describe('InlineForm', () => {
     expect(submitFunc).toHaveBeenCalled();
   });
 
-
 });
 

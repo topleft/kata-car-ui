@@ -3,15 +3,14 @@ import MailingList from '../MailingList';
 
 class MailingListContainer extends React.Component {
 
-  constructor(props) {
-    super(props);
-
+  constructor() {
+    super();
     this.state = {
       emailAddress: ''
     };
   }
 
-  render() {
+  getInputs() {
     const inputs = [
       {
         name: 'emailAddress',
@@ -22,7 +21,20 @@ class MailingListContainer extends React.Component {
         width: '100%',
       }
     ];
-    return <MailingList inputs={inputs} handleSubmit={() => console.log('SUBMIT on the mailinglist')}/>;
+    return inputs;
+  }
+
+  handleSubmit() {
+    console.log('SUBMIT on the mailinglist');
+  }
+
+  render() {
+    const inputs = this.getInputs();
+    return <MailingList
+      inputs={inputs}
+      handleSubmit={
+        () => this.handleSubmit()
+      }/>;
   }
 }
 

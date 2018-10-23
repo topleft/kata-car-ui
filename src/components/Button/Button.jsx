@@ -6,12 +6,11 @@ import './styles.scss';
 const Button = (props) => {
 
   const handleClick = (e) => {
-    e.preventDefault();
+    if (e && e.preventDefault) e.preventDefault();
     props.handleClick(e);
   }
 
   return (
-
     <button
       className={`button button--${props.color || ''}`}
       onClick={(e) => handleClick(e)}>
