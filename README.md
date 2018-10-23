@@ -16,21 +16,16 @@ This is part of my UI Kata learning initiative. I find sketch files of UI's on t
 
 ## Design Credits
 
-[Sam Fortune]()
+[Sam Fortune](http://samfortuneux.com/)
 
-Thanks, Sam, for great designs and a quality sketch file.
-
-## Checklist
-|---|---|
-|React component structure||
-|High quality CSS||
-|Responsiveness||
-|Testing||
-|Accessability||
+Thanks Sam, for great designs and a quality sketch file.
 
 
 ## TODO
 
 - write tests
-- abstract out reusable components from gallery and tips
+- hover states
+  - tips
+  - cars
+  - footer links
 
