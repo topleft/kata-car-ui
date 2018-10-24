@@ -17,7 +17,8 @@ const MailingList = (props) => {
 };
 
 MailingList.propTypes = {
-  handleSubmit: PropTypes.func
+  handleSubmit: PropTypes.func,
+  inputs: PropTypes.array,
 };
 
 export default MailingList;

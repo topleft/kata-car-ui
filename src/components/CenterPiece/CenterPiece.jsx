@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import Media from "react-media";
+import Media from 'react-media';
 import './styles.scss';
 import InlineForm from '../InlineForm/InlineForm';
 import car from '../../static/Mercedes-Benz-PNG-Transparent.png';
@@ -59,7 +59,7 @@ class CenterPiece extends React.Component {
           <img
             className='center-piece__image'
             src={car}
-            alt=""/>
+            alt='White Mercedes Benz'/>
         </div>
       </div>
     );

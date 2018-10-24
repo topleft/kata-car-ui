@@ -15,8 +15,9 @@ const SectionTitle = (props) => {
 };
 
 SectionTitle.propTypes = {
-  title: PropTypes.string,
+  color: PropTypes.string,
   subtitle: PropTypes.string,
+  title: PropTypes.string,
 };
 
 export default SectionTitle;

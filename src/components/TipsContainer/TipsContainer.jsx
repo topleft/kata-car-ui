@@ -1,26 +1,30 @@
 import React from 'react';
 import Tips from '../Tips';
-
-import tip1 from '../../static/tip1.png';
-import tip2 from '../../static/tip2.png';
-import tip3 from '../../static/tip3.png';
+import CarApi from '../../utils/CarApi';
 
 class TipsContainer extends React.Component {
+  state = {
+    tips: [],
+  }
   constructor(props) {
     super(props);
   }
 
+  componentDidMount() {
+    this.getTips();
+  }
+
   getTips() {
-    return [
-      {imageUrl: tip1, title: 'Our Buyers Check List'},
-      {imageUrl: tip2, title: 'How To Spot a Fraud'},
-      {imageUrl: tip3, title: 'Best Used Cars 2018'},
-    ];
+    CarApi.getTips()
+      .then((tips) => this.setState({tips}))
+      .catch(console.error);
   }
 
   render() {
+    const {tips} = this.state;
+
     return (
-      <Tips items={this.getTips()}/>
+      <Tips items={tips}/>
     );
   }
 }

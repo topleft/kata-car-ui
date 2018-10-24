@@ -8,7 +8,7 @@ const Button = (props) => {
   const handleClick = (e) => {
     if (e && e.preventDefault) e.preventDefault();
     props.handleClick(e);
-  }
+  };
 
   return (
     <button
