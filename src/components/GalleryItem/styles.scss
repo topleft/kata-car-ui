@@ -5,9 +5,10 @@ $tag-hang: 8px;
 
 .gallery-item {
 
+  cursor: pointer;
+  margin: 5px;
   position: relative;
   width: 22%;
-  margin: 5px;
 
   @media screen and (max-width: $breakpoint-large) {
     width: 48%;
@@ -20,6 +21,21 @@ $tag-hang: 8px;
     background-color: $grey-light;
     display: inline-block;
     padding: $space;
+    transition: all .2s ease-in-out;
+
+    &:hover {
+      box-shadow: 0 20px 40px $black-shadow;
+
+      & ~ .gallery-item__tag {
+        transform: scale(1.1);
+      }
+
+      & ~ .gallery-item__title {
+        transform: scale(1.05);
+        text-shadow: 0 20px 40px $black-shadow;
+        font-weight: $bold-font-weight;
+      }
+    }
 
     & img {
       width: 80%;
@@ -42,6 +58,7 @@ $tag-hang: 8px;
     top: $tag-height - 6px;
     width: 70px;
     z-index: 2;
+    transition: all .2s ease-in-out;
 
     &:before {
       content: '';
@@ -71,7 +88,9 @@ $tag-hang: 8px;
 
   &__title {
     padding-top: $space*.33;
+    transition: all .2s ease-in-out;
   }
+
 }
 
 

@@ -7,7 +7,7 @@
 
 ## UI Kata
 
-This is part of my UI Kata learning initiative. I find sketch files of UI's on the internet and code them up focusing on 4 things:
+This is part of my UI Kata learning initiative. I find sketch files of UI's on the internet and code them up focusing on 5 things:
  - React component structure
  - High quality CSS
  - Responsiveness (mobile first)
@@ -27,5 +27,4 @@ Thanks Sam, for great designs and a quality sketch file.
 - hover states
   - tips
   - cars
-  - footer links
 

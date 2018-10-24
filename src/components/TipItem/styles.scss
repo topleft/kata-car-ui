@@ -14,11 +14,19 @@
 
   &__image {
     display: inline-block;
+    transition: all .2s ease-in-out;
+
+    &:hover {
+      transform: scale(0.95);
+      box-shadow: 0 -20px 40px $black-shadow;
+      z-index: 100;
+    }
 
     & img {
       width: 100%;
       height: auto;
       filter: brightness(.7);
+
     }
 
   }
