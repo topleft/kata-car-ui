@@ -1,0 +1,31 @@
+@import '../../styles/variables.scss';
+
+.link {
+  background-color: transparent;
+  color: $white;
+  cursor: pointer;
+  display: inline-block;
+  font-size:  $font-size-14;
+  position: relative;
+
+  &--growing-underline {
+    &:before {
+      content: '';
+      display: inline-block;
+      bottom: -4px;
+      left: 0;
+      width: 0;
+      height: 2px;
+      background-color: $white;
+      transition: 0.4s width;
+      position: absolute;
+    }
+
+    &:hover {
+      &:before {
+        width: 100%;
+      }
+    }
+  }
+
+}
