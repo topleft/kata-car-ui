@@ -1,8 +1,7 @@
 import React from 'react';
 import './styles.scss';
-
+import Link from '../Link';
 import Button from '../Button';
-
 
 class Header extends React.Component {
   listItems = [
@@ -25,8 +24,11 @@ class Header extends React.Component {
     return this.listItems.map((item, i) => {
       return (
         <span key={i}>
-          <li onClick={() => console.log(item)}>{item}</li>
-          <div></div>
+          <li>
+            <Link
+              underlineOnHover
+              value={item}>{item}</Link>
+          </li>
         </span>
       );
     });
