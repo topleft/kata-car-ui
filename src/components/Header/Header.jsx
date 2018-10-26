@@ -26,7 +26,8 @@ class Header extends React.Component {
         <span key={i}>
           <li>
             <Link
-              underlineOnHover
+              underlineOnHover={!this.state.mobileMenuOpen}
+              hoverColor={this.state.mobileMenuOpen ? 'orange' : null}
               value={item}>{item}</Link>
           </li>
         </span>
@@ -47,7 +48,7 @@ class Header extends React.Component {
             {this.renderNavItems()}
             <span>
               <li>
-                <Button color='green' handleClick={() => console.log('clicked the header')}>Sign Up</Button>
+                <Button color='green' handleClick={() => console.log('clicked SIGN UP')}>Sign Up</Button>
               </li>
             </span>
           </ul>
@@ -58,7 +59,14 @@ class Header extends React.Component {
           <div className={'mobile-menu__list'}>
             <ul>
               {this.renderNavItems()}
-              <li className='highlight'>Sign Up</li>
+              <span className='highlight'>
+                <li>
+                  <Link
+                    color='green'
+                    hoverColor='orange'
+                    value={'Sign Up'}>Sign Up</Link>
+                </li>
+              </span>
             </ul>
           </div>
         </div>

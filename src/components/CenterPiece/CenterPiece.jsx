@@ -49,7 +49,7 @@ class CenterPiece extends React.Component {
               {(match) => (
                 <InlineForm
                   inputs={this.inputs}
-                  handleSubmit={(e) => e.preventDefault()}
+                  handleSubmit={() => console.log('clicked FIND MY CAR')}
                   buttonText='Find My Car'
                   match={match}/>
               )}

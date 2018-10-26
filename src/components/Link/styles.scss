@@ -2,11 +2,29 @@
 
 .link {
   background-color: transparent;
-  color: $white;
   cursor: pointer;
   display: inline-block;
-  font-size:  $font-size-14;
   position: relative;
+
+  &--white {
+    color: $white;
+  }
+
+  &--green {
+    color: $lime-green;
+  }
+
+  &--hover-orange {
+    &:hover {
+      color: $orange-dark;
+    }
+  }
+
+  &--hover-green {
+    &:hover {
+      color: $orange-dark;
+    }
+  }
 
   &--growing-underline {
     &:before {
