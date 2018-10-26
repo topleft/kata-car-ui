@@ -25,7 +25,7 @@ class MailingListContainer extends React.Component {
   }
 
   handleSubmit() {
-    console.log('SUBMIT on the mailinglist');
+    console.log(`SUBMIT: ${JSON.stringify(this.state)}`);
   }
 
   render() {

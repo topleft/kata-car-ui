@@ -49,7 +49,7 @@ class CenterPiece extends React.Component {
               {(match) => (
                 <InlineForm
                   inputs={this.inputs}
-                  handleSubmit={() => console.log('clicked FIND MY CAR')}
+                  handleSubmit={() => console.log(`SUBMIT: ${JSON.stringify(this.state)}`)}
                   buttonText='Find My Car'
                   match={match}/>
               )}

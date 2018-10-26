@@ -27,7 +27,9 @@ class Header extends React.Component {
             <Link
               underlineOnHover={!this.state.mobileMenuOpen}
               hoverColor={this.state.mobileMenuOpen ? 'orange' : null}
-              value={item}>{item}</Link>
+              value={item}>
+              {item}
+            </Link>
           </li>
         </span>
       );
