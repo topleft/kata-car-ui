@@ -26,7 +26,7 @@ class CenterPiece extends React.Component {
       },
       {
         name: 'postalCode',
-        type: 'text',
+        type: 'number',
         value: this.state.postalCode,
         handleChange: (e) => this.setState({postalCode: e.target.value}),
         placeholder: 'Postal code',

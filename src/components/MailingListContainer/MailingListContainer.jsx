@@ -10,8 +10,8 @@ class MailingListContainer extends React.Component {
     };
   }
 
-  getInputs() {
-    const inputs = [
+  get inputs() {
+    return [
       {
         name: 'emailAddress',
         type: 'text',
@@ -21,7 +21,6 @@ class MailingListContainer extends React.Component {
         width: '100%',
       }
     ];
-    return inputs;
   }
 
   handleSubmit() {
@@ -29,9 +28,8 @@ class MailingListContainer extends React.Component {
   }
 
   render() {
-    const inputs = this.getInputs();
     return <MailingList
-      inputs={inputs}
+      inputs={this.inputs}
       handleSubmit={
         () => this.handleSubmit()
       }/>;
