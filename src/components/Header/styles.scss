@@ -46,7 +46,7 @@
     width: 30px;
   }
 
-  @media screen and (min-width: $breakpoint-med + 100px) {
+  @media screen and (min-width: $breakpoint-med) {
     &__mobile-menu-toggle {
       display: none;
     }
@@ -91,7 +91,7 @@
     height: 20px;
     left: $space*1.5;
     position: absolute;
-    top: 12px;
+    top: 18px;
     visibility: visible;
     width: 20px;
   }

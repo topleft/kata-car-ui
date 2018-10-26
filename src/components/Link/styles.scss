@@ -14,15 +14,18 @@
     color: $lime-green;
   }
 
-  &--hover-orange {
-    &:hover {
-      color: $orange-dark;
-    }
-  }
+  &--hover {
 
-  &--hover-green {
-    &:hover {
-      color: $orange-dark;
+    &-orange {
+      &:hover {
+        color: $orange-dark;
+      }
+    }
+
+    &-green {
+      &:hover {
+        color: $lime-green;
+      }
     }
   }
 

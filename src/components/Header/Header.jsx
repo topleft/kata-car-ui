@@ -8,7 +8,6 @@ class Header extends React.Component {
     'Search Cars',
     'Buyers Tips',
     'Finance',
-    'Sign In',
   ]
 
   title = 'DreamCars'

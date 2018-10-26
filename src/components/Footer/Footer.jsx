@@ -10,7 +10,7 @@ const Footer = (props) => {
       <div className='footer__title'>{props.title}</div>
       <ul className='footer__list'>
         {props.listItems.map((item, i) => (
-          <li key={i} onClick={() => console.log(item)}>
+          <li key={i}>
             <Link value={item} underlineOnHover>{item}</Link>
           </li>
         ))}

@@ -5,11 +5,11 @@ import './styles.scss';
 
 const Link = (props) => {
 
-  const classes = `
-    link
-    ${props.underlineOnHover ? 'link--growing-underline' : ''}
-    link--${props.color}
-    link--hover-${props.hoverColor}
+  const classes = `\
+    link\
+    ${props.underlineOnHover ? 'link--growing-underline' : ''}\
+    link--${props.color}\
+    link--hover-${props.hoverColor}\
   `;
 
   return (
@@ -23,6 +23,7 @@ const Link = (props) => {
 
 Link.defaultProps = {
   color: 'white',
+  hoverColor: '',
 };
 
 Link.propTypes = {
